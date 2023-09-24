@@ -6,7 +6,7 @@ startASN = 1
 
 def render(c,x,y):
     global startASN
-    barcode_value = f"ASN2022-{startASN:03d}"
+    barcode_value = f"ASN2022{startASN:03d}"
     startASN = startASN + 1
 
     qr = QRCodeImage(barcode_value, size=y*0.9)
