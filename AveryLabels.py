@@ -1,7 +1,7 @@
 import os
 from collections.abc import Iterator
 from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import LETTER, landscape
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch, mm, cm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
@@ -51,7 +51,7 @@ class AveryLabel:
         self.margins = data[4]
         self.topDown = True
         self.debug = False
-        self.pagesize = LETTER
+        self.pagesize = A4
         self.position = 0
         self.__dict__.update(kwargs)
 
