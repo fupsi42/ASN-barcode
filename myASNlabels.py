@@ -6,13 +6,14 @@ startASN = 1
 
 def render(c,x,y):
     global startASN
-    barcode_value = f"ASN2022{startASN:03d}"
+    barcode_value = f"ASN41{startASN:04d}" ## 11 Markus, 21 Silke, 31 Trici, 41 Allgemein
+    barcode_text = f"Allg. 41{startASN:04d}"
     startASN = startASN + 1
 
     qr = QRCodeImage(barcode_value, size=y*0.9)
     qr.drawOn(c,1*mm,y*0.05)
     c.setFont("Helvetica", 2*mm)
-    c.drawString(y, (y-2*mm)/2, barcode_value)
+    c.drawString(y, (y-2*mm)/2, barcode_text)
     print(x)
     print(y)
 
